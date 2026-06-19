@@ -37,9 +37,9 @@ export default function App() {
       style={{ height: `${pairs.length * 120 + 200}vh` }}
     >
       <div className="fixed top-6 left-6 z-50 flex gap-4 font-mono text-[11px] tracking-[0.12em] text-white/30">
-        <span>#SCROLL</span>
-        <span>#TYPOGRAPHY</span>
-        <span>#MOTION</span>
+        <span>RCHARTS</span>
+        <span>CHARTTYPES</span>
+        <span>UI</span>
       </div>
 
       <div className="sticky top-0 h-screen overflow-hidden bg-[#080808]">
@@ -53,7 +53,7 @@ export default function App() {
         <ChartDisplay pairs={pairs} activeIndex={activeIndex} />
 
         <ScrollColumn
-          items={pairs.map((p) => p.brand)}
+          items={pairs.map((p) => p.chartType)}
           activeIndex={activeIndex}
           y={listY}
           align="right"

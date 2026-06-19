@@ -24,7 +24,7 @@ export function ChartDisplay({ pairs, activeIndex }: ChartDisplayProps) {
         </div>
       ))}
 
-      <div className="absolute inset-0 pointer-events-none outline outline-1 outline-white/7" />
+      <div className="absolute inset-0 pointer-events-none outline outline-white/7" />
     </div>
   );
 }

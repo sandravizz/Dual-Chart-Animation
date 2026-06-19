@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactElement } from "react";
 import {
   BarChart, Bar, LineChart, Line, AreaChart, Area,
   RadarChart, Radar, PolarGrid, PolarAngleAxis,
@@ -7,14 +7,14 @@ import {
 
 export type Pair = {
   product: string;
-  brand: string;
-  chart: ReactNode;
+  chartType: string;
+  chart: ReactElement;
 };
 
 export const pairs: Pair[] = [
   {
-    product: "VOLT R2",
-    brand: "TESLA",
+    product: "Name 1",
+    chartType: "LINE CHART",
     chart: (
       <LineChart data={[
         { m: "J", v: 420 }, { m: "F", v: 580 }, { m: "M", v: 510 },
@@ -28,8 +28,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "ÉCLAT",
-    brand: "CHANEL",
+    product: "Name 2",
+    chartType: "BAR CHART",
     chart: (
       <BarChart data={[
         { q: "Q1", v: 310 }, { q: "Q2", v: 480 }, { q: "Q3", v: 390 },
@@ -43,8 +43,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "PROJECT ION",
-    brand: "APPLE",
+    product: "Name 3",
+    chartType: "AREA CHART",
     chart: (
       <AreaChart data={[
         { d: "Mon", v: 900 }, { d: "Tue", v: 1200 }, { d: "Wed", v: 1100 },
@@ -64,8 +64,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "AEROLINE",
-    brand: "BMW",
+    product: "Name 4",
+    chartType: "BAR CHART",
     chart: (
       <BarChart layout="vertical" data={[
         { label: "0–60", v: 34 }, { label: "Range", v: 78 }, { label: "Output", v: 56 }, { label: "Torque", v: 91 },
@@ -78,8 +78,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "SÉRIE NOIR",
-    brand: "SAINT LAURENT",
+    product: "Name 5",
+    chartType: "LINE CHART",
     chart: (
       <LineChart data={[
         { s: "SS22", v: 210 }, { s: "AW22", v: 340 }, { s: "SS23", v: 290 },
@@ -93,8 +93,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "ULTRARUN",
-    brand: "NIKE",
+    product: "Name 6",
+    chartType: "BAR CHART",
     chart: (
       <BarChart data={[
         { w: "Wk 1", v: 42 }, { w: "Wk 2", v: 55 }, { w: "Wk 3", v: 48 },
@@ -108,8 +108,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "ATELIER 03",
-    brand: "HERMÈS",
+    product: "Name 7",
+    chartType: "RADAR CHART",
     chart: (
       <RadarChart data={[
         { axis: "Craft", v: 92 }, { axis: "Rarity", v: 85 }, { axis: "Heritage", v: 98 },
@@ -123,8 +123,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "PULSE ONE",
-    brand: "ADIDAS",
+    product: "Name 8",
+    chartType: "AREA CHART",
     chart: (
       <AreaChart data={[
         { t: "0s", v: 0 }, { t: "10s", v: 22 }, { t: "20s", v: 58 },
@@ -144,8 +144,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "LINEA 24",
-    brand: "PRADA",
+    product: "Name 9",
+    chartType: "BAR CHART",
     chart: (
       <BarChart data={[
         { r: "Milan", v: 88 }, { r: "Paris", v: 74 }, { r: "Tokyo", v: 95 },
@@ -159,8 +159,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "PURE FORM",
-    brand: "PORSCHE",
+    product: "Name 10",
+    chartType: "LINE CHART",
     chart: (
       <LineChart data={[
         { rpm: "1k", v: 120 }, { rpm: "2k", v: 240 }, { rpm: "3k", v: 380 },
@@ -174,8 +174,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "EDGE",
-    brand: "MERCEDES-BENZ",
+    product: "Name 11",
+    chartType: "AREA CHART",
     chart: (
       <AreaChart data={[
         { y: "2020", v: 310 }, { y: "2021", v: 420 }, { y: "2022", v: 390 },
@@ -195,8 +195,8 @@ export const pairs: Pair[] = [
     ),
   },
   {
-    product: "ROSSO LINEA",
-    brand: "FERRARI",
+    product: "Name 12",
+    chartType: "RADAR CHART",
     chart: (
       <RadarChart data={[
         { axis: "Speed", v: 99 }, { axis: "Grip", v: 87 }, { axis: "Aero", v: 93 },
