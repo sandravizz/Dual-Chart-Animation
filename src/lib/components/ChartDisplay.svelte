@@ -1,7 +1,11 @@
 <script>
   import AreaChartPanel from "./AreaChartPanel.svelte";
-  import BarChartPanel from "./BarChartPanel.svelte";
   import BarChartPanelHorizontal from "./BarChartPanelHorizontal.svelte";
+  import LineChartPanel from "./LineChartPanel.svelte";
+  import ScatterChartPanel from "./ScatterChartPanel.svelte";
+  import PieChartPanel from "./PieChartPanel.svelte";
+  import DonutChartPanel from "./DonutChartPanel.svelte";
+  import GroupedBarChartPanel from "./GroupedBarChartPanel.svelte";
 
   let { pairs, activeIndex } = $props();
 </script>
@@ -21,6 +25,16 @@
           <AreaChartPanel {pair} />
         {:else if pair.kind === "bar"}
           <BarChartPanelHorizontal {pair} />
+        {:else if pair.kind === "line"}
+          <LineChartPanel {pair} />
+        {:else if pair.kind === "scatter"}
+          <ScatterChartPanel {pair} />
+        {:else if pair.kind === "pie"}
+          <PieChartPanel {pair} />
+        {:else if pair.kind === "donut"}
+          <DonutChartPanel {pair} />
+        {:else if pair.kind === "grouped-bar"}
+          <GroupedBarChartPanel {pair} />
         {/if}
       </div>
     </div>

@@ -4,19 +4,6 @@
 
   let { pair } = $props();
 
-  const colors = [
-  "#EED8DE", // Pale blush background
-  "#E0F3F6", // Light blue navigation
-  "#97AF98", // Sage green
-  "#D86858", // Coral accent
-  "#736B82", // Lavender gray
-  "#61C1EB", // Sky blue
-  "#CBC1C1", // Light gray
-  "#000101", // Near black
-  "#FEFCFD", // Off white
-  "#3A2526"  // Deep navy/brown
-];
-
   function wrapLabel(label) {
     const words = String(label).split(" ");
     if (words.length < 2) return label;
@@ -29,21 +16,17 @@
   data={pair.data}
   x={pair.xKey}
   xScale={scaleBand()}
-  series={[
-    {
-      key: pair.product,
-      value: pair.yKey,
-      color: "#6E63A8",
-      props: { insets: { x: 8 }, strokeWidth: 0 },
-    },
-  ]}
+  series={pair.series}
+  seriesLayout="group"
   axis="x"
+  legend={{ placement: "bottom" }}
   props={{
+    bars: { insets: { x: 4 }, strokeWidth: 0, radius: 3 },
     xAxis: {
       tickLength: 0,
       format: wrapLabel,
       tickLabelProps: { class: "text-xs font-light" },
     },
+    legend: { class: "text-xs font-light" },
   }}
 />
-

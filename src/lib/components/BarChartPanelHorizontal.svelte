@@ -1,5 +1,6 @@
 <script>
   import { BarChart, Labels, defaultChartPadding } from "layerchart";
+  import { palette } from "$lib/colors";
 
   let { pair } = $props();
 </script>
@@ -16,7 +17,7 @@
     {
       key: pair.product,
       value: pair.yKey,
-      color: "#6E63A8",
+      color: palette[9],
       props: { insets: { y: 4 }, strokeWidth: 0 },
     },
   ]}
