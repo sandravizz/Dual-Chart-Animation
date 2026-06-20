@@ -10,17 +10,20 @@
   let { pairs, activeIndex } = $props();
 </script>
 
-<div class="w-200 absolute top-20 left-1/2 -translate-x-1/2">
+<div class="absolute top-16 left-1/2 w-[88vw] -translate-x-1/2 lg:top-20 lg:w-200">
   {#each pairs as pair, i (pair.product)}
     <div
       class="absolute inset-0 transition-opacity duration-500 ease-[ease]"
       style:opacity={i === activeIndex ? 1 : 0}
     >
+      <div class="mb-1 font-sans text-[10px] tracking-wide text-[#2A2659]/50 uppercase lg:hidden">
+        {pair.chartType}
+      </div>
       <div class="mb-2 font-sans text-sm text-[#2A2659]">
         {pair.product}
       </div>
 
-      <div class="h-140 flex gap-6">
+      <div class="flex h-[55vh] gap-6 lg:h-140">
         {#if pair.kind === "area"}
           <AreaChartPanel {pair} />
         {:else if pair.kind === "bar"}

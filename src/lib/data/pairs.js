@@ -106,7 +106,7 @@ export const pairs = [
   },
   {
     product: "Women Remain Underrepresented in National Parliaments",
-    chartType: "GROUPED BAR CHART",
+    chartType: "GROUPED BARS",
     kind: "grouped-bar",
     xKey: "region",
     series: [
