@@ -5,15 +5,7 @@
 
 @import 'tw-animate-css';
 
-/* This site has no light mode, so disable the OS-based dark: variant rather than fighting it component by component. */
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
   --font-sans: 'Geist', sans-serif;
 }
 
-@layer base {
-  body {
-    @apply bg-[#080808];
-  }
-}

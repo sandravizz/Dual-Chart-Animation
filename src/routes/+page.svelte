@@ -62,7 +62,7 @@
 
 <div id="top" bind:this={containerEl} class="bg-[#F4DDD6]" style:height="{pairs.length * 120 + 200}vh">
   <div class="sticky top-0 h-screen overflow-hidden bg-[#F4DDD6]">
-    <ScrollColumn items={pairs.map((p) => p.product)} {activeIndex} y={listY} align="left" />
+    <ScrollColumn items={pairs.map((p) => p.chartType)} {activeIndex} y={listY} align="left" />
     <ChartDisplay {pairs} {activeIndex} />
     <ScrollColumn items={pairs.map((p) => p.chartType)} {activeIndex} y={listY} align="right" />
     <div class="absolute inset-x-0 top-0 h-40 pointer-events-none z-10 bg-linear-to-b from-[#F4DDD6] to-transparent"></div>

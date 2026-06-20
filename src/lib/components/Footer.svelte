@@ -10,7 +10,7 @@
   <div class="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
     <FooterCopyright
       href="#top"
-      by="Dual Wave"
+      by="SandraViz.com"
       class="text-[#2A2659]/50"
       classes={{ link: "text-[#2A2659] hover:underline" }}
     />
