@@ -15,9 +15,25 @@
   color-scheme: light;
 
   --color-base-100: #f4ddd6;
+  --color-base-200: #efccc2;
+  --color-base-300: #e9bcae;
   --color-base-content: #2a2659;
   --color-primary: #2a2659;
   --color-primary-content: #f4ddd6;
+  --color-secondary: #736b82;
+  --color-secondary-content: #f4ddd6;
+  --color-accent: #d86858;
+  --color-accent-content: #f4ddd6;
+  --color-neutral: #3a2526;
+  --color-neutral-content: #f4ddd6;
+  --color-info: #61c1eb;
+  --color-info-content: #2a2659;
+  --color-success: #97af98;
+  --color-success-content: #2a2659;
+  --color-warning: #d86858;
+  --color-warning-content: #2a2659;
+  --color-error: #3a2526;
+  --color-error-content: #f4ddd6;
 }
 
 @theme {
