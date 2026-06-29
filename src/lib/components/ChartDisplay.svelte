@@ -11,7 +11,7 @@
   let { pairs, activeIndex } = $props();
 </script>
 
-<div class="absolute top-10 left-1/2 w-[88vw] -translate-x-1/2 lg:top-20 lg:w-200">
+<div class="absolute top-10 left-1/2 w-[88vw] -translate-x-1/2 lg:top-20 lg:left-[43%] lg:w-200">
   {#each pairs as pair, i (pair.title)}
     <div
       class="absolute inset-0 transition-opacity duration-500 ease-[ease]"

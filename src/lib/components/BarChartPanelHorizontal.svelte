@@ -1,5 +1,5 @@
 <script>
-  import { BarChart, Labels, defaultChartPadding } from "layerchart";
+  import { BarChart, defaultChartPadding } from "layerchart";
   import { scaleBand, scaleLinear } from "d3-scale";
   import { extent } from "d3-array";
   import { palette } from "$lib/colors";
@@ -7,6 +7,27 @@
   let { pair } = $props();
 
   const hasPerRowColor = $derived(pair.data.every((d) => d.color));
+
+  const LINE_HEIGHT = 13;
+  const MAX_CHARS_PER_LINE = 14;
+
+  function wrapLabel(text, maxChars = MAX_CHARS_PER_LINE) {
+    if (text.length <= maxChars) return [text];
+    const words = text.split(" ");
+    const lines = [];
+    let current = "";
+    for (const word of words) {
+      const candidate = current ? `${current} ${word}` : word;
+      if (candidate.length > maxChars && current) {
+        lines.push(current);
+        current = word;
+      } else {
+        current = candidate;
+      }
+    }
+    if (current) lines.push(current);
+    return lines;
+  }
 </script>
 
 <BarChart
@@ -38,7 +59,16 @@
     tooltip: { item: { label: "" } },
   }}
 >
-  {#snippet aboveMarks()}
-    <Labels x={() => 8} value={pair.xKey} class="text-xs font-light fill-[#FEFCFD] stroke-none" />
+  {#snippet aboveMarks({ context })}
+    {#each pair.data as d (d[pair.xKey])}
+      {@const lines = wrapLabel(String(d[pair.xKey]))}
+      {@const bandCenter = context.yScale(d[pair.xKey]) + context.yScale.bandwidth() / 2}
+      {@const startY = bandCenter - ((lines.length - 1) * LINE_HEIGHT) / 2}
+      <text x={8} class="text-xs font-light fill-[#FEFCFD] stroke-none">
+        {#each lines as line, i (i)}
+          <tspan x={8} y={startY + i * LINE_HEIGHT}>{line}</tspan>
+        {/each}
+      </text>
+    {/each}
   {/snippet}
 </BarChart>
