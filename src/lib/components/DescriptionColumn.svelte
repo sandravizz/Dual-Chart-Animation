@@ -2,7 +2,9 @@
   let { items, activeIndex } = $props();
 </script>
 
-<div class="absolute top-10 right-0 hidden w-[24%] flex-col px-6 lg:top-20 lg:flex">
+<div
+  class="absolute top-10 left-[calc(43%+464px)] right-8 hidden flex-col px-6 lg:top-36 lg:flex"
+>
   <div class="relative h-56">
     {#each items as item, i (i)}
       <p

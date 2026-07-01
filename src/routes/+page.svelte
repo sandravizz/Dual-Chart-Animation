@@ -5,9 +5,9 @@
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
-  const economicCharts = pairs.slice(0, 3);
-  const humanCostCharts = pairs.slice(3, 5);
-  const aidAndRepresentationCharts = pairs.slice(5, 9);
+  const economicCharts = pairs.slice(0, 2);
+  const humanCostCharts = pairs.slice(2, 4);
+  const aidAndRepresentationCharts = pairs.slice(4, 8);
 
   let chartsStartEl;
   function scrollToCharts() {
@@ -21,69 +21,97 @@
   <section
     class="mx-auto w-[88vw] pt-36 pb-24 font-sans text-base-content lg:ml-[calc(43%-400px)] lg:w-200"
   >
-    <h1 class="text-3xl font-semibold sm:text-4xl">The Global Justice Report</h1>
+    <h1 class="text-3xl font-semibold sm:text-4xl">
+      The Global Justice Report
+    </h1>
     <p class="mt-2 text-xl font-medium text-base-content/80 sm:text-2xl">
       A Plan for Equality &amp; Prosperity Within Planetary Boundaries
     </p>
 
     <button type="button" class="btn btn-primary mt-6" onclick={scrollToCharts}>
       Jump to visualization
-      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m0 0-6-6m6 6 6-6" />
+      <svg
+        class="h-4 w-4"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 5v14m0 0-6-6m6 6 6-6"
+        />
       </svg>
     </button>
 
     <p class="mt-8 text-lg leading-relaxed text-base-content/80">
-      The Global Justice Report attempts to set out a new vision for global progress in the
-      21<sup>st</sup> century: grounding human development and equality in planetary habitability.
-      It explores the conditions under which the world could move toward this horizon and traces
-      an economically and ecologically consistent transition path from 2026 to 2100.
+      The Global Justice Report attempts to set out a new vision for global
+      progress in the 21<sup>st</sup> century: grounding human development and equality
+      in planetary habitability. It explores the conditions under which the world
+      could move toward this horizon and traces an economically and ecologically
+      consistent transition path from 2026 to 2100.
     </p>
 
     <p class="mt-4 text-lg leading-relaxed text-base-content/80">
-      Its main conclusion is simple: it is possible to reconcile planetary habitability and high
-      well-being for all, but only if the transformation rests on three pillars simultaneously.
-      <strong>Fast decarbonization</strong> of energy systems is necessary. But we also need a major
-      shift toward <strong>sufficiency</strong> – understood as a sharp reduction in labour hours and
-      material footprint and large changes in consumption patterns, food habits, land use, and forest
-      cover. In addition, neither decarbonization nor sufficiency can be financed and politically
-      sustained without a <strong>drastic reduction in inequality of income, wealth and power</strong>,
-      both between countries and within them. The compression of global inequality is not only
-      compatible with deep decarbonization; it is a necessary condition for shared prosperity on a
-      finite planet.
+      Its main conclusion is simple: it is possible to reconcile planetary
+      habitability and high well-being for all, but only if the transformation
+      rests on three pillars simultaneously.
+      <strong>Fast decarbonization</strong> of energy systems is necessary. But
+      we also need a major shift toward <strong>sufficiency</strong> –
+      understood as a sharp reduction in labour hours and material footprint and
+      large changes in consumption patterns, food habits, land use, and forest
+      cover. In addition, neither decarbonization nor sufficiency can be
+      financed and politically sustained without a
+      <strong
+        >drastic reduction in inequality of income, wealth and power</strong
+      >, both between countries and within them. The compression of global
+      inequality is not only compatible with deep decarbonization; it is a
+      necessary condition for shared prosperity on a finite planet.
     </p>
 
     <p class="mt-4 text-lg leading-relaxed text-base-content/80">
-      The Global Justice Report is the first attempt to propose a fully quantified plan going in this
-      direction, combining four dimensions that today's debates often treat separately: redistribution
-      at the world scale, a deep reform of the international financial and economic order, a radical
-      transformation of energy systems, and substantial shifts in consumption patterns.
-      <strong>Compared to most climate scenarios, including by the Intergovernmental Panel on Climate
-      Change (IPCC), the main novelty</strong> is that we model all four dimensions together and
-      <strong>place inequality and sufficiency at the center of the analysis</strong>.
+      The Global Justice Report is the first attempt to propose a fully
+      quantified plan going in this direction, combining four dimensions that
+      today's debates often treat separately: redistribution at the world scale,
+      a deep reform of the international financial and economic order, a radical
+      transformation of energy systems, and substantial shifts in consumption
+      patterns.
+      <strong
+        >Compared to most climate scenarios, including by the Intergovernmental
+        Panel on Climate Change (IPCC), the main novelty</strong
+      >
+      is that we model all four dimensions together and
+      <strong
+        >place inequality and sufficiency at the center of the analysis</strong
+      >.
     </p>
 
     <p class="mt-4 text-lg leading-relaxed text-base-content/80">
-      Concretely: Per capita monthly national income converges to €5,000 in every country, closing a
-      16-fold gap. The share of the <strong>bottom half of global wealth increases from 2% to
-      30%</strong>, while the share of the billionaire class decreases from 6% to 0.05%. Nearly 90% of
-      the world's population double their income while working roughly half as many hours as they do
-      today. Warming reaches 1.8°C by 2100, rather than over 4°C under baseline macroeconomic and policy
-      trends.
+      Concretely: Per capita monthly national income converges to €5,000 in
+      every country, closing a 16-fold gap. The share of the <strong
+        >bottom half of global wealth increases from 2% to 30%</strong
+      >, while the share of the billionaire class decreases from 6% to 0.05%.
+      Nearly 90% of the world's population double their income while working
+      roughly half as many hours as they do today. Warming reaches 1.8°C by
+      2100, rather than over 4°C under baseline macroeconomic and policy trends.
     </p>
 
     <p class="mt-4 text-lg leading-relaxed text-base-content/80">
-      The Global Justice Report is part of a <strong>broader international agenda for planetary
-      habitability, social justice, and reform of the global financial architecture</strong> – including
-      the Bridgetown Initiative launched by Barbados in 2022, combining international monetary reform,
-      global wealth taxation, and climate finance; the recent Sevilla Commitment on development finance;
-      the UN Tax Convention process; and G20 initiatives led by Brazil and South Africa on global
-      inequality and the re-balancing of wealth and power within planetary limits. The main contribution
-      of this report is to place these proposals within a quantified institutional framework, modeling
-      socioeconomic convergence, temperature change, and distributional trajectories through 2100. Our
-      broad conclusion is that it is possible to conceive of a quantitatively consistent plan for
-      sustainable development on a global scale based on proposals such as the Bridgetown Initiative and
-      other recent platforms.
+      The Global Justice Report is part of a <strong
+        >broader international agenda for planetary habitability, social
+        justice, and reform of the global financial architecture</strong
+      > – including the Bridgetown Initiative launched by Barbados in 2022, combining
+      international monetary reform, global wealth taxation, and climate finance;
+      the recent Sevilla Commitment on development finance; the UN Tax Convention
+      process; and G20 initiatives led by Brazil and South Africa on global inequality
+      and the re-balancing of wealth and power within planetary limits. The main
+      contribution of this report is to place these proposals within a quantified
+      institutional framework, modeling socioeconomic convergence, temperature change,
+      and distributional trajectories through 2100. Our broad conclusion is that
+      it is possible to conceive of a quantitatively consistent plan for sustainable
+      development on a global scale based on proposals such as the Bridgetown Initiative
+      and other recent platforms.
     </p>
 
     <div class="mt-10 h-[160vh]">
@@ -146,25 +174,11 @@
     </div>
   </section>
 
+  <div class="divider mx-auto w-[88vw] lg:ml-[calc(43%-400px)] lg:w-200"></div>
+
   <div bind:this={chartsStartEl}></div>
   <ScrollySection pairs={economicCharts} />
-
-  <TextBreak heading="Beyond the Balance Sheet">
-    <p>
-      Numbers on a chart are one thing. Behind these income gaps are differences in how
-      long people live, how safe childbirth is, and how content people feel with their lives.
-    </p>
-  </TextBreak>
-
   <ScrollySection pairs={humanCostCharts} />
-
-  <TextBreak heading="Who Carries the Weight">
-    <p>
-      These gaps don't only show up in income and health. They also shape who funds
-      humanitarian relief, who hosts the displaced, and who holds power.
-    </p>
-  </TextBreak>
-
   <ScrollySection pairs={aidAndRepresentationCharts} />
 </div>
 

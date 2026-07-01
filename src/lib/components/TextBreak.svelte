@@ -10,5 +10,6 @@
     <div class="mt-6 space-y-4 text-lg leading-relaxed text-base-content/80">
       {@render children()}
     </div>
+    <div class="divider mt-10"></div>
   </div>
 </div>

@@ -1,12 +1,11 @@
 <script>
-  import AreaChartPanel from "./AreaChartPanel.svelte";
-  import BarChartPanelHorizontal from "./BarChartPanelHorizontal.svelte";
-  import LineChartPanel from "./LineChartPanel.svelte";
-  import ScatterChartPanel from "./ScatterChartPanel.svelte";
-  import PieChartPanel from "./PieChartPanel.svelte";
-  import DonutChartPanel from "./DonutChartPanel.svelte";
-  import GroupedBarChartPanel from "./GroupedBarChartPanel.svelte";
-  import StackedBarChartPanel from "./StackedBarChartPanel.svelte";
+  import BarChartPanelHorizontal from "./charts/BarChartPanelHorizontal.svelte";
+  import LineChartPanel from "./charts/LineChartPanel.svelte";
+  import ScatterChartPanel from "./charts/ScatterChartPanel.svelte";
+  import PieChartPanel from "./charts/PieChartPanel.svelte";
+  import DonutChartPanel from "./charts/DonutChartPanel.svelte";
+  import GroupedBarChartPanel from "./charts/GroupedBarChartPanel.svelte";
+  import StackedBarChartPanel from "./charts/StackedBarChartPanel.svelte";
 
   let { pairs, activeIndex } = $props();
 </script>
@@ -24,14 +23,12 @@
       <div class="mb-2 text-xl font-sans font-medium text-[#2A2659] ">
         {pair.title}
       </div>
-      <div class="mb-4 font-sans text-sm text-[#2A2659]">
+      <div class="mb-6 font-sans text-sm text-[#2A2659]">
         {pair.subtitle}
       </div>
 
       <div class="flex h-[52vh] gap-6 lg:h-134">
-        {#if pair.kind === "area"}
-          <AreaChartPanel {pair} />
-        {:else if pair.kind === "bar"}
+        {#if pair.kind === "bar"}
           <BarChartPanelHorizontal {pair} />
         {:else if pair.kind === "line"}
           <LineChartPanel {pair} />
