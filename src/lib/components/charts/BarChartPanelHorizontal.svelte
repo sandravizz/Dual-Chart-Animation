@@ -1,7 +1,7 @@
 <script>
   import { BarChart, defaultChartPadding } from "layerchart";
   import { scaleBand, scaleLinear } from "d3-scale";
-  import { extent } from "d3-array";
+  import { max } from "d3-array";
   import { palette } from "$lib/colors";
   import { tickLabelProps } from "$lib/chart-theme";
 
@@ -15,7 +15,7 @@
   x={pair.yKey}
   y={pair.xKey}
   yScale={scaleBand().paddingInner(0.2).paddingOuter(0)}
-  xScale={scaleLinear().domain(extent(pair.data, (d) => d[pair.yKey]))}
+  xScale={scaleLinear().domain([0, max(pair.data, (d) => d[pair.yKey])])}
   xRange={({ width }) => [0, width]}
   orientation="horizontal"
   axis="y"

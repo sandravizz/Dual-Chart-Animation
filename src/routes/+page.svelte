@@ -4,29 +4,49 @@
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
-  const chartSections = [data.slice(0, 3), data.slice(3, 5), data.slice(5)];
+  const chartSections = [
+    data.slice(0, 4),
+    data.slice(4, 7),
+    data.slice(7, 11),
+    data.slice(11, 15),
+    data.slice(15, 17),
+  ];
 
   const chapters = [
     {
       id: "chapter-1",
       label: "Chapter 1",
-      title: "Closing the Global Income Gap",
+      title: "Convergence and the Transformation of Work",
       intro:
-        "The first pillar of the Global Justice Report is full income convergence across countries by 2100. Today, average monthly incomes differ by a factor of 16 between the poorest and richest world regions – a gap that shapes every other dimension of well-being, from health to education. The figures in this chapter show where the world stands today and how far convergence has already begun, starting with income levels across regions, the long march toward gender equality in work hours, and the transition from today's unequal IMF voting rights to one person-one vote.",
+        "The first pillar of the Global Justice Report is full income convergence across countries by 2100. Today, average monthly incomes differ by a factor of 16 between the poorest and richest world regions – a gap that shapes every other dimension of well-being. The figures in this chapter show how that gap closes, and how productivity gains are redirected: annual work hours fall from about 2,100 to 1,000, men and women converge to equal shares of economic and domestic labour, and the economy shifts from material sectors like food and manufacturing toward education, health, leisure and culture.",
     },
     {
       id: "chapter-2",
       label: "Chapter 2",
-      title: "Prosperity, Well-Being and Solidarity",
+      title: "Sufficiency, Energy and Climate",
       intro:
-        "Income alone does not capture human flourishing, but it remains closely tied to it. This chapter looks at the relationship between national wealth and reported life satisfaction, and at how the international community currently finances solidarity: who funds global humanitarian aid, and how much of the effort rests on a small number of government donors.",
+        "Neither sufficiency nor the energy transition can keep warming below 2°C on its own – together they can. This chapter compares the cumulative emissions and temperature outcomes of the report's core scenarios, decomposes what actually drives emissions down between 2026 and 2100, and shows why targeted sufficiency with structural change outperforms large uniform degrowth: converging to €60,000 per capita with sectoral transformation yields less warming than pushing everyone down to €15,000 without it.",
     },
     {
       id: "chapter-3",
       label: "Chapter 3",
-      title: "Displacement, Representation and the Shape of Inequality",
+      title: "Financing Global Justice",
       intro:
-        "The costs of today's global order are not distributed evenly. This final chapter examines who hosts the world's displaced people, how far women remain underrepresented in national parliaments, and how the composition of income differs across world regions – three views of the same underlying question: who carries the burden, and who holds the power.",
+        "The institutional heart of the plan is the Global Justice Fund: it collects revenues from a global wealth tax and a global income tax, invests them through a World Sovereign Fund – an active portfolio of sustainable assets stabilizing at about 60% of world GDP – and distributes country dividends on an equal per-capita basis to finance climate investment, health and education. The figures in this chapter show the scale of that architecture: expenditures of around 10% of world GDP per year, roughly thirty times today's total development aid, and the convergence of education spending it makes possible.",
+    },
+    {
+      id: "chapter-4",
+      label: "Chapter 4",
+      title: "Compressing Income and Wealth Inequality",
+      intro:
+        "Global inequality compression is both a social justice objective and the condition for financing the transition. This chapter traces the projected redistribution: the top 10% income share falls from 52% to 18% while the bottom 50% rises from 8% to 38%; the bottom half of wealth holders go from owning 2% of global wealth to 30%; the billionaire class shrinks from 6.4% of global wealth to 0.05%; and in every region of the world, large majorities end up with higher incomes than today.",
+    },
+    {
+      id: "chapter-5",
+      label: "Chapter 5",
+      title: "Power, Representation and Reparations",
+      intro:
+        "Who holds the power, and who owes whom? This final chapter looks at global governance and historical responsibility: the transition from today's IMF voting rights – where Europe and North America hold four times their population share – to one person-one vote by 2050, and the finding that the North-South transfers induced by the Global Justice Fund remain well below what reparations for colonial and climate damages accumulated since 1800 would actually require.",
     },
   ];
 </script>

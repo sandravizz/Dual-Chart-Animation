@@ -6,6 +6,8 @@
     { href: "#chapter-1", label: "Chapter 1" },
     { href: "#chapter-2", label: "Chapter 2" },
     { href: "#chapter-3", label: "Chapter 3" },
+    { href: "#chapter-4", label: "Chapter 4" },
+    { href: "#chapter-5", label: "Chapter 5" },
   ];
 </script>
 

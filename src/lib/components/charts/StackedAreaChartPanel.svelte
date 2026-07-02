@@ -6,6 +6,7 @@
   let { pair } = $props();
 
   const formatYear = timeFormat("%Y");
+  const formatValue = (d) => `${d}${pair.valueSuffix ?? ""}`;
 </script>
 
 <AreaChart
@@ -17,7 +18,7 @@
   props={{
     area: { fillOpacity: 0.9, line: { strokeWidth: 1 } },
     xAxis: { tickLength: 0, format: formatYear, tickLabelProps },
-    yAxis: { tickLabelProps },
+    yAxis: { tickLabelProps, format: formatValue },
     legend: legendProps,
   }}
 />
