@@ -12,7 +12,7 @@
       label: "Chapter 1",
       title: "Closing the Global Income Gap",
       intro:
-        "The first pillar of the Global Justice Report is full income convergence across countries by 2100. Today, average monthly incomes differ by a factor of 16 between the poorest and richest world regions – a gap that shapes every other dimension of well-being, from health to education. The figures in this chapter show where the world stands today and how far convergence has already begun, starting with income levels across regions, the long march toward gender equality in work hours, and the dramatic decline in maternal mortality since 1990.",
+        "The first pillar of the Global Justice Report is full income convergence across countries by 2100. Today, average monthly incomes differ by a factor of 16 between the poorest and richest world regions – a gap that shapes every other dimension of well-being, from health to education. The figures in this chapter show where the world stands today and how far convergence has already begun, starting with income levels across regions, the long march toward gender equality in work hours, and the transition from today's unequal IMF voting rights to one person-one vote.",
     },
     {
       id: "chapter-2",
