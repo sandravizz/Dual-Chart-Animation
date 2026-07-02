@@ -27,12 +27,47 @@ export const data = [
     ],
   },
   {
+    title: "Toward Gender Equality in Work Hours by 2100",
+    subtitle: "Average Annual Work Hours per Working-Age Individual, 1800–2100",
+    description:
+      "In the Sustainable Convergence scenario, working-age men and women are projected to supply the same quantity of economic labour and domestic labour and to receive equal average pay by 2100. In 1800, men supplied 40% of all work hours as economic labour while women carried 30% as domestic labour; by 2100, each of the four categories converges to 25%. At the same time, total work hours per working-age individual fall from around 3,300 per year in 1800 and 2,300 today to roughly 1,600 by 2100 – a continuation of the trend toward gender equality observed between 1950 and 2025, albeit with a major acceleration.",
+    source:
+      "Interpretation. In the Sustainable Convergence scenario, working-age men and women are projected to supply the same quantity of economic labour and domestic labour and to receive equal average pay. This would represent a continuation of the trend toward gender equality observed between 1950 and 2025, albeit with a major acceleration. Sources and series: gjp.wid.world (F3)",
+    number: "Figure 2",
+    kind: "stacked-area",
+    xKey: "year",
+    series: [
+      { key: "Domestic labour (women)", value: "domesticWomen", color: palette[2] },
+      { key: "Domestic labour (men)", value: "domesticMen", color: palette[4] },
+      { key: "Economic labour (women)", value: "economicWomen", color: palette[5] },
+      { key: "Economic labour (men)", value: "economicMen", color: palette[3] },
+    ],
+    data: [
+      { year: new Date(1800, 0, 1), domesticWomen: 990, domesticMen: 210, economicWomen: 800, economicMen: 1320 },
+      { year: new Date(1820, 0, 1), domesticWomen: 1010, domesticMen: 220, economicWomen: 800, economicMen: 1330 },
+      { year: new Date(1840, 0, 1), domesticWomen: 1120, domesticMen: 260, economicWomen: 840, economicMen: 1440 },
+      { year: new Date(1860, 0, 1), domesticWomen: 1100, domesticMen: 250, economicWomen: 830, economicMen: 1420 },
+      { year: new Date(1880, 0, 1), domesticWomen: 1010, domesticMen: 250, economicWomen: 720, economicMen: 1280 },
+      { year: new Date(1900, 0, 1), domesticWomen: 980, domesticMen: 240, economicWomen: 680, economicMen: 1250 },
+      { year: new Date(1920, 0, 1), domesticWomen: 900, domesticMen: 220, economicWomen: 580, economicMen: 1200 },
+      { year: new Date(1940, 0, 1), domesticWomen: 750, domesticMen: 200, economicWomen: 430, economicMen: 940 },
+      { year: new Date(1960, 0, 1), domesticWomen: 750, domesticMen: 205, economicWomen: 410, economicMen: 905 },
+      { year: new Date(1980, 0, 1), domesticWomen: 730, domesticMen: 220, economicWomen: 440, economicMen: 850 },
+      { year: new Date(2000, 0, 1), domesticWomen: 795, domesticMen: 265, economicWomen: 530, economicMen: 820 },
+      { year: new Date(2020, 0, 1), domesticWomen: 770, domesticMen: 255, economicWomen: 510, economicMen: 795 },
+      { year: new Date(2040, 0, 1), domesticWomen: 620, domesticMen: 300, economicWomen: 460, economicMen: 620 },
+      { year: new Date(2060, 0, 1), domesticWomen: 520, domesticMen: 350, economicWomen: 450, economicMen: 530 },
+      { year: new Date(2080, 0, 1), domesticWomen: 450, domesticMen: 380, economicWomen: 420, economicMen: 430 },
+      { year: new Date(2100, 0, 1), domesticWomen: 400, domesticMen: 400, economicWomen: 400, economicMen: 400 },
+    ],
+  },
+  {
     title: "Maternal Mortality Has Fallen Sharply Since 1990",
     subtitle: "Maternal Deaths Have Fallen Fastest in South Asia",
     description:
       "Maternal deaths have fallen sharply since 1990, with Sub-Saharan Africa's rate dropping from 1,450 to 540 per 100,000 live births. South & South-East Asia saw an even steeper decline, falling from 620 to 130 over the same period.",
     source: "Source: Illustrative data",
-    number: "Figure 2",
+    number: "Figure 3",
     kind: "line",
     xKey: "year",
     series: [
@@ -53,7 +88,7 @@ export const data = [
     description:
       "Wealthier countries tend to report higher life satisfaction, with Norway and Germany scoring above 7 on the happiness scale alongside GDP per capita above $50,000. Lower-income countries like Nigeria and India cluster toward the bottom of both axes, though the relationship isn't perfectly linear.",
     source: "Source: Illustrative data",
-    number: "Figure 3",
+    number: "Figure 4",
     kind: "scatter",
     xKey: "gdp",
     yKey: "happiness",
@@ -81,7 +116,7 @@ export const data = [
     description:
       "Government donors supply the majority of humanitarian funding at 58%, more than double the combined share from private donors and multilateral agencies. NGOs, foundations, and other sources make up the remaining 8%.",
     source: "Source: Illustrative data",
-    number: "Figure 4",
+    number: "Figure 5",
     kind: "pie",
     key: "source",
     value: "share",
@@ -99,7 +134,7 @@ export const data = [
     description:
       "Sub-Saharan Africa hosts the largest share of the world's displaced people at 26%, closely followed by the Middle East and North Africa at 24%. North America and Oceania host just 5%, the smallest share of any region.",
     source: "Source: Illustrative data",
-    number: "Figure 5",
+    number: "Figure 6",
     kind: "donut",
     key: "region",
     value: "share",
@@ -118,7 +153,7 @@ export const data = [
     description:
       "Women remain underrepresented in national parliaments everywhere, holding at most 32% of seats in Latin America. The gap is widest in the Middle East and North Africa, where men hold 84% of seats to women's 16%.",
     source: "Source: Illustrative data",
-    number: "Figure 6",
+    number: "Figure 7",
     kind: "grouped-bar",
     xKey: "region",
     series: [
@@ -141,7 +176,7 @@ export const data = [
     description:
       "The same regional income gap shown as a single stacked bar, from Sub-Saharan Africa's 290 at the base to North America and Oceania's 4,590 at the top. Stacking the values highlights how much of the total is concentrated in the highest-income regions.",
     source: "Source: gjp.wid.world (F1)",
-    number: "Figure 7",
+    number: "Figure 8",
     kind: "stacked-bar",
     xKey: "region",
     yKey: "v",

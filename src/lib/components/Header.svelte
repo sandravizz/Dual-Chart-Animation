@@ -3,9 +3,9 @@
 
   const links = [
     { href: "#top", label: "Home" },
-    { href: "#work", label: "Work" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { href: "#chapter-1", label: "Chapter 1" },
+    { href: "#chapter-2", label: "Chapter 2" },
+    { href: "#chapter-3", label: "Chapter 3" },
   ];
 </script>
 

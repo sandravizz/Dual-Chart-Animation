@@ -7,13 +7,6 @@
       <a href="#top" class="link link-hover text-base-content">SandraViz.com</a>
     </span>
     <span aria-hidden="true">·</span>
-    <nav class="flex gap-3">
-      <a href="#top" class="hover:text-base-content">Home</a>
-      <a href="#work" class="hover:text-base-content">Work</a>
-      <a href="#about" class="hover:text-base-content">About</a>
-      <a href="#contact" class="hover:text-base-content">Contact</a>
-    </nav>
-    <span aria-hidden="true">·</span>
     <div class="flex gap-3">
       <!-- svelte-ignore a11y_invalid_attribute -->
       <a href="#" aria-label="GitHub" class="hover:text-base-content">

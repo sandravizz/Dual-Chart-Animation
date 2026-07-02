@@ -4,7 +4,31 @@
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
-  const chartSections = [data.slice(0, 2), data.slice(2, 4), data.slice(4)];
+  const chartSections = [data.slice(0, 3), data.slice(3, 5), data.slice(5)];
+
+  const chapters = [
+    {
+      id: "chapter-1",
+      label: "Chapter 1",
+      title: "Closing the Global Income Gap",
+      intro:
+        "The first pillar of the Global Justice Report is full income convergence across countries by 2100. Today, average monthly incomes differ by a factor of 16 between the poorest and richest world regions – a gap that shapes every other dimension of well-being, from health to education. The figures in this chapter show where the world stands today and how far convergence has already begun, starting with income levels across regions, the long march toward gender equality in work hours, and the dramatic decline in maternal mortality since 1990.",
+    },
+    {
+      id: "chapter-2",
+      label: "Chapter 2",
+      title: "Prosperity, Well-Being and Solidarity",
+      intro:
+        "Income alone does not capture human flourishing, but it remains closely tied to it. This chapter looks at the relationship between national wealth and reported life satisfaction, and at how the international community currently finances solidarity: who funds global humanitarian aid, and how much of the effort rests on a small number of government donors.",
+    },
+    {
+      id: "chapter-3",
+      label: "Chapter 3",
+      title: "Displacement, Representation and the Shape of Inequality",
+      intro:
+        "The costs of today's global order are not distributed evenly. This final chapter examines who hosts the world's displaced people, how far women remain underrepresented in national parliaments, and how the composition of income differs across world regions – three views of the same underlying question: who carries the burden, and who holds the power.",
+    },
+  ];
 </script>
 
 <Header />
@@ -169,8 +193,20 @@
   <div class="divider mx-auto w-[88vw] lg:ml-[calc(43%-400px)] lg:w-200"></div>
 
   <div id="charts"></div>
-  {#each chartSections as section (section[0].title)}
-    <ScrollySection pairs={section} />
+  {#each chapters as chapter, i (chapter.id)}
+    <section
+      id={chapter.id}
+      class="mx-auto w-[88vw] scroll-mt-20 py-24 font-sans text-base-content lg:ml-[calc(43%-400px)] lg:w-200"
+    >
+      <p class="text-sm font-semibold uppercase tracking-widest text-base-content/50">
+        {chapter.label}
+      </p>
+      <h2 class="mt-2 text-2xl font-semibold sm:text-3xl">{chapter.title}</h2>
+      <p class="mt-4 text-lg leading-relaxed text-base-content/80">
+        {chapter.intro}
+      </p>
+    </section>
+    <ScrollySection pairs={chartSections[i]} />
   {/each}
 </div>
 
